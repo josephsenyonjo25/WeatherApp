@@ -6,7 +6,13 @@ body{
 }
 .Navigation ul{
   list-style: none;
+  padding: 10px;
+  width: 95%;
+  display: inline-flex;
+  background-color: blue;
 }
 .Navigation a{
   text-decoration: none;
+  margin-right: 20px;
+  color: white;
 }
