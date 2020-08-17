@@ -16,3 +16,6 @@ body{
   margin-right: 20px;
   color: white;
 }
+.CitySearch input{
+  margin: 0 10px 0 5px;
+}

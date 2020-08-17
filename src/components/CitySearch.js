@@ -6,9 +6,9 @@ class CitySearch extends Component {
     render() { /*add logo*/
       return (
         <div className="CitySearch">
-            <h3>Find Weather Information</h3> 
+            
             <form>
-                <label>City</label>
+                <label>Find weather in</label>
                 <input type ="text" placeholder="Enter city here"/>
                 <button type ="submit">Get Forecast</button>
             </form>
