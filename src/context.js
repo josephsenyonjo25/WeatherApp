@@ -2,31 +2,26 @@ import React, { Component } from 'react';
 export const Context = React.createContext();
 export class Provider extends Component {
 	state = {
-		data: ['testing', 1, 2, 3],
+		
 		city: ''
 	}
     componentDidMount() {
-        /*fetch('api ...')
-        .then(res => res.json())
-		.then(data => this.setState({data}))*/
-		this.getData();
-    }
-        exampleContextMethod =() => alert('this is a method in the context!!')
-
+		
+	}
+      
 	getData =()=>{
-		fetch('api ...')
+		fetch('https://www.metaweather.com/api/location/search/?query=london')
         .then(res => res.json())
-        .then(data => this.setState({data}))
+        .then(data => this.setState({data}));
 	}
 
-	updateCity =(city) =>this.setState({city});
 
 	render() {
 
-	  let { state, updateCity, getData, exampleContextMethod } =this;
+	  let { state, getData } =this;
 
 		return(
-		  <Context.Provider value ={{state, updateCity, getData, exampleContextMethod}}>
+		  <Context.Provider value ={{state, getData}}>
 			{this.props.children}
 		  </Context.Provider>
 		)

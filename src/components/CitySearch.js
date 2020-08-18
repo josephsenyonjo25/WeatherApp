@@ -4,10 +4,14 @@ import {Context} from '../context';
 
 function CitySearch(){
     const data = useContext(Context);
+
     const handleSubmit= (event) => {
       event.preventDefault();
       data.updateCity(event.target.previousSibling.value);
+      data.getData();
+      console.log(data.state.data);
     }
+
     //render() { 
       return (
         <div className="CitySearch">
