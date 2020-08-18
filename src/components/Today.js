@@ -7,6 +7,14 @@ function Today() {
       return (
         <div className="Today"> 
             <h2>Today's Forecast for {data.state.city}</h2>
+            <div className = "today">
+                <p className = "date">Currently</p>
+                <p className = "current">&deg;</p>
+                <p className = "high">High: &deg;</p>
+                <p className = "low">Low: &deg;</p>
+                <img src ="" alt="" className = "icon" />
+                <p className = "condition"></p>
+            </div>
         </div>
       );
     //}
