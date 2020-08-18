@@ -9,10 +9,12 @@ export class Provider extends Component {
 		
 	}
       
-	getData =()=>{
-		fetch('https://www.metaweather.com/api/location/search/?query=london')
+	getData =(city)=>{
+		fetch('https://www.metaweather.com/api/location/search/?query='+city)
         .then(res => res.json())
-        .then(data => this.setState({data}));
+        .then(data => {
+			this.setState({city: data[0].title})
+		});
 	}
 
 
