@@ -47,6 +47,14 @@ body{
   font-size: 1.1em;
   font-weight: bold;
 }
+.CitySearch button:hover{
+  background-color: blue;
+  color:#daedf4;
+}
+h2{
+  color:blue;
+}
+
 #days{
   display: flex;
 }
