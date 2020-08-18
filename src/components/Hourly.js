@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context';
 
-class Hourly extends Component {
-    render() { 
+function Hourly() {
+    const data = useContext(Context);
+    //render() { 
       return (
         <div className="Hourly"> 
-            <h2>Hourly Forecast</h2>
+            <h2>Hourly Forecast for {data.state.city}</h2>
           
         </div>
       );
-    }
+   // }
   }
 
 
