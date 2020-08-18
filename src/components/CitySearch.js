@@ -7,9 +7,8 @@ function CitySearch(){
 
     const handleSubmit= (event) => {
       event.preventDefault();
-      data.updateCity(event.target.previousSibling.value);
-      data.getData();
-      console.log(data.state.data);
+      data.getData(event.target.previousSibling.value);
+      console.log(data.state.city);
     }
 
     //render() { 
