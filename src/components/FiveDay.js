@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context';
 import OneDay from './OneDay';
 
 
-class FiveDay extends Component {
-    render() { 
+function FiveDay() {
+    const data = useContext(Context);
+    //render() { 
       return (
         <div className="FiveDay"> 
-            <h2>5-Day Forecast</h2>
+            <h2>5-Day Forecast for {data.state.city}</h2>
             <div id ="days">
                 <OneDay />
                 <OneDay />
@@ -16,7 +18,7 @@ class FiveDay extends Component {
             </div>
         </div>
       );
-    }
+   // }
   }
 
 
