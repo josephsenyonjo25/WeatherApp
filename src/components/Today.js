@@ -1,14 +1,15 @@
-import React, {Component} from 'react';
+import React, {useContext} from 'react';
+import {Context} from '../context';
 
-class Today extends Component {
-    render() { 
+function Today() {
+    const data = useContext(Context);
+    //render() { 
       return (
         <div className="Today"> 
-            <h2>Today's Forecast</h2>
-          
+            <h2>Today's Forecast for{data.state.city}</h2>
         </div>
       );
-    }
+    //}
   }
 
 
