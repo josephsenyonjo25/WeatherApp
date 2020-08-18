@@ -1,9 +1,12 @@
 body{
   font-family: sans-serif;
   padding: 10px;
+  background-color: #eeeeee;
 }
 .Header h1{
-  margin:0;
+  margin:10px;
+  color:blue;
+  text-align: center;
 }
 .Navigation ul{
   list-style: none;
