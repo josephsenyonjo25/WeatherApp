@@ -30,9 +30,13 @@ body{
   padding: 20px;
   width: 90%;
 }
-
+.CitySearch label{
+  color: blue;
+  font-size: 1.2em;
+}
 .CitySearch input{
-  margin: 0 10px 0 5px;
+  margin: 0 20px 0 5px;
+  font-size: 1.1em;
 }
 #days{
   display: flex;
