@@ -38,6 +38,15 @@ body{
   margin: 0 20px 0 5px;
   font-size: 1.1em;
 }
+.CitySearch button{
+  background-color: #daedf4;
+  color: blue;
+  border: 2px solid blue;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
 #days{
   display: flex;
 }
