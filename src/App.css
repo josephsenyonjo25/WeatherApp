@@ -98,3 +98,11 @@ h2{
 .condition{
   font-size: 1.3em;
 }
+.Footer{
+  text-align: center;
+  font-size: 0.8em;
+  background-color: blue;
+  color: white;
+  padding: 5px;
+  margin-top: 20px;
+}
