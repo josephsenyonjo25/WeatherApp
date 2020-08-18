@@ -23,9 +23,10 @@ body{
 #days{
   display: flex;
 }
-.OneDay{
-  background-color: lightblue;
-  border: 1px solid black;
-  padding: 20px;
+.OneDay, #today {
+  background-color: #daedf4;
+  border: 1px solid blue;
+  padding: 10px;
   margin-right: 10px;
+  text-align: center;
 }
