@@ -19,9 +19,9 @@ export class Provider extends Component {
 				.then(r=> r.json())
 				.then(d=>{
 					let today ={};
-					today.temp = Math.round(Number(d.consolidated_weather[0].the_temp));
-					today.hightemp = Math.round(Number(d.consolidated_weather[0].max_temp));
-					today.lowtemp = Math.round(Number(d.consolidated_weather[0].min_temp));
+					today.temp = Math.round(Number(d.consolidated_weather[0].the_temp)*9/5+32);
+					today.hightemp = Math.round(Number(d.consolidated_weather[0].max_temp)*9/5+32);
+					today.lowtemp = Math.round(Number(d.consolidated_weather[0].min_temp)*9/5+32);
 					today.condition = d.consolidated_weather[0].weather_state_name;
 					this.setState({today})
 					console.log(today);
