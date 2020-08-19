@@ -49,10 +49,10 @@ export class Provider extends Component {     //export context for use in other 
 	render() {
 
 	  let { state, getData } =this;
-
+						
 		return(
-		  <Context.Provider value ={{state, getData}}>
-			{this.props.children}
+		  <Context.Provider value ={{state, getData}}> 
+			{this.props.children} 
 		  </Context.Provider>
 		)
 	}		
