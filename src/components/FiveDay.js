@@ -5,7 +5,6 @@ import OneDay from './OneDay';
 
 function FiveDay() {
     const data = useContext(Context);
-    //render() { 
     if(data.state.city !== ''){ //if city exists
       return (
         <div className="FiveDay"> 

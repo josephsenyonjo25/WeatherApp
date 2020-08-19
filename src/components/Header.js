@@ -3,7 +3,7 @@ import '../App.css';
 
 
 class Header extends Component {
-    render() { /*add logo*/
+    render() { 
       return (
         <div className="Header"> 
             <h1>Weather App</h1>

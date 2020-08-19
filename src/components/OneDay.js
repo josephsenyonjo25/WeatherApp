@@ -3,20 +3,19 @@ import {Context} from '../context';
 
 function OneDay(props) {
     const data = useContext(Context);
-    let id = Number(props.id)-1;
+    let id = Number(props.id)-1; // id for the OneDay component
     let month = '';
     let day = '';
     let dayName = '';
     let dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     let monthNames =['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    if(data.state.city){
+        
     let date = data.state.days[id].date.split('-');
     month = monthNames[Number(date[1]) -1];
     day = date[2];
     let dateObj = new Date(date[0], date[1]-1, date[2]);
     dayName = dayNames[dateObj.getDay()]; // indexing into the dayNames array
-    }
-    //render() { 
+   
       return (
         <div className="OneDay"> 
            <p className = "day">{dayName}</p>
@@ -27,7 +26,6 @@ function OneDay(props) {
            <p className = "condition">{data.state.days[id].condition}</p>
         </div>
       );
-    //}
   }
 
 

@@ -3,7 +3,6 @@ import {Context} from '../context';
 
 function Today() {
     const data = useContext(Context);
-    //render() { 
     if(data.state.city !== ''){ //if city exists
       return (
         <div className="Today"> 

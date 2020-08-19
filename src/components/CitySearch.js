@@ -7,11 +7,10 @@ function CitySearch(){
 
     const handleSubmit= (event) => {
       event.preventDefault();
-      data.getData(event.target.previousSibling.value);
-      console.log(data.state.city);
+      if(event.target.previousSibling.value){
+        data.getData(event.target.previousSibling.value);
+      }
     }
-
-    //render() { 
       return (
         <div className="CitySearch">
             
@@ -23,7 +22,6 @@ function CitySearch(){
 
         </div>
       );
-   // }
   }
 
 
