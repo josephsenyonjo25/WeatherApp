@@ -54,7 +54,13 @@ body{
 h2{
   color:blue;
 }
-
+/*.Today, .FiveDay{
+  text-align: center;
+  margin: 0 auto;
+}
+#today, #days{
+  margin: 0 auto;
+}*/
 #days{
   display: flex;
 }
