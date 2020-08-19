@@ -4,9 +4,10 @@ import {Context} from '../context';
 function Today() {
     const data = useContext(Context);
     //render() { 
+    if(data.state.city !== ''){ //if city exists
       return (
         <div className="Today"> 
-            <h2>Today's Forecast for {data.state.city}</h2>
+            <h2>Today's Weather for {data.state.city}</h2>
             <div id = "today">
                 <p className = "date">Currently</p>
                 <p className = "current">{data.state.today.temp}&deg;</p>
@@ -17,7 +18,15 @@ function Today() {
             </div>
         </div>
       );
-    //}
+    }
+    else{ // if city does not exist
+        return (
+            <div className="Today"> 
+                <h2>Today's Weather</h2>
+                <p>No data available.</p>
+            </div>
+        );
+    }
   }
 
 

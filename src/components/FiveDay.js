@@ -6,6 +6,7 @@ import OneDay from './OneDay';
 function FiveDay() {
     const data = useContext(Context);
     //render() { 
+    if(data.state.city !== ''){ //if city exists
       return (
         <div className="FiveDay"> 
             <h2>5-Day Forecast for {data.state.city}</h2>
@@ -18,7 +19,16 @@ function FiveDay() {
             </div>
         </div>
       );
-   // }
+   
+    }
+    else{ // if city does not exist
+        return (
+            <div className="FiveDay"> 
+                <h2>5-Day Forecast</h2>
+                <p>No data available.</p>
+            </div>
+        );
+    }
   }
 
 
