@@ -23,6 +23,7 @@ export class Provider extends Component {
 					today.hightemp = Math.round(Number(d.consolidated_weather[0].max_temp)*9/5+32);
 					today.lowtemp = Math.round(Number(d.consolidated_weather[0].min_temp)*9/5+32);
 					today.condition = d.consolidated_weather[0].weather_state_name;
+					today.icon='https://www.metaweather.com/static/img/weather/png/64/'+d.consolidated_weather[0].weather_state_abbr+'.png';
 					this.setState({today})
 					console.log(today);
 				})
