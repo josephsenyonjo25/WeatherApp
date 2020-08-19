@@ -9,11 +9,11 @@ function Today() {
             <h2>Today's Forecast for {data.state.city}</h2>
             <div id = "today">
                 <p className = "date">Currently</p>
-                <p className = "current">&deg;</p>
-                <p className = "high">High: &deg;</p>
-                <p className = "low">Low: &deg;</p>
+                <p className = "current">{data.state.today.temp}&deg;</p>
+                <p className = "high">High: {data.state.today.hightemp}&deg;</p>
+                <p className = "low">Low: {data.state.today.lowtemp}&deg;</p>
                 <img src ="" alt="" className = "icon" />
-                <p className = "condition"></p>
+                <p className = "condition">{data.state.today.condition}</p>
             </div>
         </div>
       );
