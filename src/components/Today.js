@@ -12,7 +12,7 @@ function Today() {
                 <p className = "current">{data.state.today.temp}&deg;</p>
                 <p className = "high">High: {data.state.today.hightemp}&deg;</p>
                 <p className = "low">Low: {data.state.today.lowtemp}&deg;</p>
-                <img src ="" alt="" className = "icon" />
+                <img src ={data.state.today.icon} alt={data.state.today.condition} className = "icon" />
                 <p className = "condition">{data.state.today.condition}</p>
             </div>
         </div>
