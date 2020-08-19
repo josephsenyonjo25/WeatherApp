@@ -1,13 +1,13 @@
-import React, {useContext} from 'react';
+import React, {useContext} from 'react'; //import useContext for functional components 
 import '../App.css';
-import {Context} from '../context';
+import {Context} from '../context'; // import context 
 
 function CitySearch(){
     const data = useContext(Context);
 
     const handleSubmit= (event) => {
       event.preventDefault();
-      if(event.target.previousSibling.value){
+      if(event.target.previousSibling.value){      // the previous sibling is the input box
         data.getData(event.target.previousSibling.value);
       }
     }
