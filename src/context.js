@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-export const Context = React.createContext();
-export class Provider extends Component {
+export const Context = React.createContext(); //create context, assign it to variable context 
+export class Provider extends Component {     //export context for use in other component
 	state = {
 		city: '',
 		today: {},
-		days: [{}, {}, {}, {}, {}]
+		days: [{}, {}, {}, {}, {}]   //initialize state
 	}
     componentDidMount() {
 		
@@ -40,7 +40,6 @@ export class Provider extends Component {
 						days.push(day);
 					}
 					this.setState({days});
-					console.log(days);
 				})
 			}
 		});
