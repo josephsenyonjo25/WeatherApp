@@ -11,6 +11,7 @@ export class Provider extends Component {
 	}
       
 	getData =(city)=>{
+		this.setState({city:''});
 		fetch('https://www.metaweather.com/api/location/search/?query='+city)
         .then(res => res.json())
         .then(async data => {
