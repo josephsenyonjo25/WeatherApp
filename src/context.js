@@ -3,7 +3,8 @@ export const Context = React.createContext();
 export class Provider extends Component {
 	state = {
 		city: '',
-		today: {}
+		today: {},
+		days: [{}, {}, {}, {}, {}]
 	}
     componentDidMount() {
 		
@@ -26,6 +27,19 @@ export class Provider extends Component {
 					today.icon='https://www.metaweather.com/static/img/weather/png/64/'+d.consolidated_weather[0].weather_state_abbr+'.png';
 					this.setState({today})
 					console.log(today);
+
+					let days =[];
+					for(let i=1; i<=5; i++) {
+						let day = {};
+						day.date =d.consolidated_weather[i].applicable_date;
+						day.hightemp = Math.round(Number(d.consolidated_weather[i].max_temp)*9/5+32);
+						day.lowtemp = Math.round(Number(d.consolidated_weather[i].min_temp)*9/5+32);
+						day.condition = d.consolidated_weather[i].weather_state_name;
+						day.icon='https://www.metaweather.com/static/img/weather/png/64/'+d.consolidated_weather[i].weather_state_abbr+'.png';
+						days.push(day);
+					}
+					this.setState({days});
+					console.log(days);
 				})
 			}
 		});
